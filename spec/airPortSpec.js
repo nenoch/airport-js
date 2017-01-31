@@ -12,6 +12,20 @@ describe('airPort', function() {
       airport.land(plane)
       expect(airport._planes).toContain(plane);
     });
+
   });
+
+  describe('instruct the airport to take off', function(){
+
+    it('takes off plane', function()  {
+      airport.land(plane)
+      airport.takeOff(plane)
+      expect(airport._planes).not.toContain(plane);
+
+    });
+  });
+
+
+
 
 });
