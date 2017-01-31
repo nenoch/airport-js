@@ -23,6 +23,12 @@ describe('airPort', function() {
       expect(airport._planes).not.toContain(plane);
 
     });
+
+    it('prevents plane to takes off when stormy', function()  {
+      airport.land(plane)
+      expect( function(){airport.takeOff(plane);} ).toThrow(new Error("Weather condition too bad to take off!"));
+
+    });
   });
 
 
