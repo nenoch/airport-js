@@ -4,6 +4,7 @@ describe('airPort', function() {
      airport = new airPort()
      plane = new Plane()
 
+
     });
 
   describe('instruct airport to land plane', function() {
@@ -26,6 +27,8 @@ describe('airPort', function() {
 
     it('prevents plane to takes off when stormy', function()  {
       airport.land(plane)
+      console.log(weather)
+      spyOn(weather, 'randomizer').and.returnValue('stormy');
       expect( function(){airport.takeOff(plane);} ).toThrow(new Error("Weather condition too bad to take off!"));
 
     });
