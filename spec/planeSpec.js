@@ -5,11 +5,11 @@ describe('Plane', function() {
   airport = new airPort();
   });
 
-it('confrims plane has landed',function() {
-  airport.land(plane)
-  expect(plane.isLanded).toBeTruthy();
-
-});
+// it('confrims plane has landed',function() {
+//   airport.land(plane)
+//   expect(plane.isLanded).toBeTruthy();
+//
+// });
 
 
 
